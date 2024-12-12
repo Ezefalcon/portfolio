@@ -1,0 +1,60 @@
+---
+interface Props {
+	id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div id={id} class="snackbar">
+	<p class="snackbar-message">test</p>
+	<button class="snackbar-close">&times;</button>
+</div>
+
+<style>
+    .snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #4a0fa8; /* Dark purple */
+        color: #fff;
+        text-align: center;
+        border-radius: 20px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        bottom: 30px;
+        font-size: 17px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .snackbar.show {
+        visibility: visible;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    .snackbar-close {
+        background: none;
+        border: none;
+        color: #d8b4fe; /* Light purple */
+        font-size: 20px;
+        cursor: pointer;
+        padding: 0 0 0 16px;
+    }
+
+    .snackbar-close:hover {
+        color: #fff;
+    }
+
+    @keyframes fadein {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+    }
+
+    @keyframes fadeout {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+    }
+</style>

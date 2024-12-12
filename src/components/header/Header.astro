@@ -2,6 +2,8 @@
 import './header.css';
 const { origin } = Astro.props;
 import Logo from '../Logo.astro';
+import SocialIcons from '../SocialIcons.astro';
+
 ---
 
 <header class="header">
@@ -27,6 +29,7 @@ import Logo from '../Logo.astro';
 						</li>
 					))
 				}
+				<SocialIcons header=true></SocialIcons>
 			</ul>
 		</nav>
 	</div>

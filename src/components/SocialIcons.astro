@@ -10,13 +10,14 @@ const socialLinks = [
 	{
 		title: 'CV',
 		icon: 'tabler:file-cv',
-		href: '../docs/cv_jhon_doe.pdf',
+		href: '../docs/cv_ezequielfalcon.pdf',
 
 	},
 ];
+const { header } = Astro.props;
 ---
 
-<div class="icons__container">
+<div class:list={['icons__container', header ? 'isOnHeader' : '']}>
     {
         socialLinks.map((data) => (
             <a
@@ -38,15 +39,18 @@ const socialLinks = [
 <style>
 	.icons__container {
 		display: flex;
-    width: 29.6rem;
-    /* padding: 1.3rem 4rem; */
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2rem;
-}
-.skill__icon{
-	color:#dcd8fc;
-}
+		width: 29.6rem;
+		/* padding: 1.3rem 4rem; */
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 2rem;
+	}
+	.isOnHeader {
+		width: fit-content;
+	}
+	.skill__icon{
+		color:#dcd8fc;
+	}
 
 	.LinkedIn:hover{
 		color: #0e76a8;
@@ -60,7 +64,5 @@ const socialLinks = [
 	.CV:hover{
 		color:#8e64ff;
 	}
-
-
 
 </style>

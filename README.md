@@ -1,4 +1,4 @@
-### start using this template by running:
+### This portfolio was created using this template from Astro
  `npm create astro@latest -- --template SofiDevO/portfolio-sofidev-garrux`
 # Portfolio Template with Astro
 

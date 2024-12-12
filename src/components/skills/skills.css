@@ -15,6 +15,20 @@
 	gap: 1.1rem;
 }
 
+#skills .terminal__skills {
+	flex-basis: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 1920px) {
+	#skills img {
+		width: 400px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	#skills {
 		flex-direction: column-reverse;

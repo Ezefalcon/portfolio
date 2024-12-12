@@ -1,5 +1,5 @@
 {
-  "name": "nebulous-nebula",
+  "name": "portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -26,11 +26,11 @@
     "url": "git+https://github.com/SofiDevO/portfolio-astrosofidev-garrux.git"
   },
   "keywords": [
-    "astro",
-    "sofidev",
+    "ezequiel",
+    "falcon",
     "frontend",
     "portfolio",
-    "javascript",
+    "ezequielfalcon",
     "portafolio",
     "css",
     "tailwind"

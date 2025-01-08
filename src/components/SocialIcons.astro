@@ -11,7 +11,7 @@ const socialLinks = [
 		title: 'CV',
 		icon: 'tabler:file-cv',
 		href: '../docs/cv_ezequielfalcon.pdf',
-
+		scale: 1.4
 	},
 ];
 const { header } = Astro.props;
@@ -27,6 +27,7 @@ const { header } = Astro.props;
             >
                 <iconify-icon
 					class=`skill__icon ${data.title}`
+					style={{"transform": `scale(${data.scale})`}}
                     icon={data.icon}
                     width={width}
                     height={height}
